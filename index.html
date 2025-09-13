@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TODO App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="brand">
+        <div class="logo">SF</div>
+        <div>
+          <h1>TODO App</h1>
+        </div>
+      </div>
+      <div class="badges">
+        <div class="pill">No build tools</div>
+        <div class="pill">Works offline</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Tasks</h2>
+      <div class="controls">
+        <input id="task-input" type="text" placeholder="Add a new task...">
+        <button id="add-btn">Add</button>
+        <button id="export-btn" class="ghost">Export JSON</button>
+        <button id="clear-btn" class="ghost">Clear all</button>
+      </div>
+      <ul id="tasks" class="tasks"></ul>
+      <footer class="meta">
+        <span id="count">0 tasks</span>
+        <span id="saved">Not saved</span>
+      </footer>
+    </section>
+
+    <script src="script.js"></script>
+  </main>
+</body>
+</html>

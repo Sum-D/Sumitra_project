@@ -1,0 +1,7 @@
+{
+  "tasks": [
+    {"id": 1, "title": "Study for Semester 4 BCA", "done": false},
+    {"id": 2, "title": "Finish internship task", "done": true},
+    {"id": 3, "title": "Cook Egg Korma", "done": false}
+  ]
+}

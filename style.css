@@ -1,0 +1,26 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+  background: #0f1724;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+.app { max-width: 900px; width: 100%; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.logo {
+  width: 56px; height: 56px; border-radius: 12px;
+  background: linear-gradient(135deg,#7c3aed,#60a5fa);
+  display: flex; align-items: center; justify-content: center; font-weight: bold;
+}
+.card { background: #1c1f2e; padding: 18px; border-radius: 12px; }
+.controls { display: flex; gap: 8px; margin-bottom: 12px; }
+input[type=text] { flex: 1; padding: 10px; border-radius: 8px; border: none; }
+button { padding: 10px 14px; border: none; border-radius: 8px; cursor: pointer; background: #7c3aed; color: #fff; }
+button.ghost { background: transparent; border: 1px solid #444; }
+.tasks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.task { display: flex; justify-content: space-between; align-items: center; padding: 12px; background: #25293c; border-radius: 8px; }
+.title { text-decoration: none; }
+.title.done { text-decoration: line-through; opacity: 0.7; }
+.meta { color: #aaa; font-size: 0.9rem; margin-top: 12px; display: flex; justify-content: space-between; }
