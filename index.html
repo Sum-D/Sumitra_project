@@ -1,42 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TODO App</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Bold & Bright</title>
+    <style>
+         :root {
+            --bg: #0f172a;
+            --accent-1: #00f2ff;
+            --accent-2: #7000ff;
+            --text: #f8fafc;
+        }
+        
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        /* Animated Background Blobs */
+        
+        .blob {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(45deg, var(--accent-1), var(--accent-2));
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.4;
+            animation: move 20s infinite alternate;
+        }
+        
+        @keyframes move {
+            from {
+                transform: translate(-10%, -10%);
+            }
+            to {
+                transform: translate(100%, 50%);
+            }
+        }
+        /* Layout */
+        
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 10%;
+        }
+        
+        h1 {
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--accent-1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            max-width: 600px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 50px 10%;
+        }
+        /* Glass Cards */
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 24px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-1);
+        }
+        
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--accent-1);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+        
+        .btn:hover {
+            box-shadow: 0 0 20px var(--accent-1);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
+
 <body>
-  <main class="app">
+    <div class="blob"></div>
+
     <header>
-      <div class="brand">
-        <div class="logo">SF</div>
+        <p style="color: var(--accent-1); font-weight: bold; letter-spacing: 2px;">HELLO, I AM A CREATIVE EXPLORER</p>
+        <h1>Designing the <br>Future of Digital.</h1>
+        <p class="tagline">I blend high-end aesthetics with functional code to build experiences that don't just work—they feel alive.</p>
         <div>
-          <h1>TODO App</h1>
+            <a href="#" class="btn">View My Work</a>
         </div>
-      </div>
-      <div class="badges">
-        <div class="pill">No build tools</div>
-        <div class="pill">Works offline</div>
-      </div>
     </header>
 
-    <section class="card">
-      <h2>Tasks</h2>
-      <div class="controls">
-        <input id="task-input" type="text" placeholder="Add a new task...">
-        <button id="add-btn">Add</button>
-        <button id="export-btn" class="ghost">Export JSON</button>
-        <button id="clear-btn" class="ghost">Clear all</button>
-      </div>
-      <ul id="tasks" class="tasks"></ul>
-      <footer class="meta">
-        <span id="count">0 tasks</span>
-        <span id="saved">Not saved</span>
-      </footer>
+    <section class="grid">
+        <div class="card">
+            <h3 style="color: var(--accent-1);">01. Visual Branding</h3>
+            <p>Creating identity systems that scream personality and demand attention in a crowded room.</p>
+        </div>
+        <div class="card">
+            <h3 style="color: var(--accent-1);">02. UI/UX Motion</h3>
+            <p>Micro-interactions and smooth flows that make users forget they're even using an app.</p>
+        </div>
+        <div class="card">
+            <h3 style="color: var(--accent-1);">03. Web Development</h3>
+            <p>Clean, performant code written in React, Tailwind, and Framer Motion for maximum impact.</p>
+        </div>
     </section>
-
-    <script src="script.js"></script>
-  </main>
 </body>
+
 </html>
